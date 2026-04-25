@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #e63946;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+.btn-danger {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.order-card {
+  border-left: 5px solid var(--primary-color);
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #ffe3e3;
+  color: var(--primary-color);
+}
