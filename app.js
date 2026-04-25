@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/orders';
+const API_URL = 'https://restaurante-api-filipe.onrender.com/api/orders';
 
 const form = document.getElementById('order-form');
 const orderId = document.getElementById('order-id');
