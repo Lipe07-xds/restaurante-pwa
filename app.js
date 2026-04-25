@@ -9,12 +9,10 @@ const ordersList = document.getElementById('orders-list');
 const message = document.getElementById('message');
 const cancelEdit = document.getElementById('cancel-edit');
 
-// Função para formatar data
 function formatDate(date) {
   return new Date(date).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 }
 
-// Carregar pedidos do servidor
 async function loadOrders() {
   try {
     const response = await fetch(API_URL);
@@ -46,7 +44,6 @@ async function loadOrders() {
   }
 }
 
-// Salvar ou Atualizar
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const id = orderId.value;
@@ -69,7 +66,6 @@ form.addEventListener('submit', async (e) => {
   loadOrders();
 });
 
-// Editar
 window.editOrder = async (id) => {
   const res = await fetch(`${API_URL}/${id}`);
   const order = await res.json();
@@ -80,7 +76,6 @@ window.editOrder = async (id) => {
   cancelEdit.classList.remove('hidden');
 };
 
-// Excluir
 window.deleteOrder = async (id) => {
   if (confirm('Finalizar pedido?')) {
     await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
